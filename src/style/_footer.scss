@@ -1,0 +1,18 @@
+.footer {
+  background: #edeef3;
+  padding-bottom: 17px;
+  &__line {
+    width: 986px;
+    height: 1px;
+    background: #ced4da;
+  }
+  &__text {
+    color: #6c757d;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 131.25% */
+    margin: 13px auto auto 386px;
+  }
+}

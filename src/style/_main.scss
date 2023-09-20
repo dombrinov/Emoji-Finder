@@ -1,0 +1,55 @@
+.main {
+  background: #edeef3;
+  padding: 80px 228px 50px 226px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px 19px;
+  }
+
+  &__cards {
+    max-width: 316px;
+    height: 184px;
+    padding: 24px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+      max-width: 48px;
+      
+      color: #68717a;
+      font-family: Inter;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 48px; /* 100% */
+      
+    }
+    &__subtext {
+      color: #000;
+
+      font-family: Inter;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px; /* 164.706% */
+      text-decoration-line: underline;
+    }
+    &__text {
+      color: #3f444a;
+      text-align: center;
+
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
