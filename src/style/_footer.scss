@@ -1,11 +1,11 @@
 .footer {
   background: #edeef3;
   padding-bottom: 17px;
-  &__line {
-    width: 986px;
-    height: 1px;
-    background: #ced4da;
+  padding-top: 13px;
+  &__container {
+    border-top: 1px solid #ced4da;
   }
+
   &__text {
     color: #6c757d;
     font-family: Inter;
