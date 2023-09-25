@@ -2,6 +2,36 @@ import { data } from "./data/data.js";
 
 const cards = document.body.querySelector(".main__container");
 
+function getUniqueKeywords(arr) {
+  for (let obj of arr) {
+    // const result = obj.keywords.split(" ").reduce((acc, item) => {
+    //   if (acc.includes(item)) {
+    //     return acc; // верни аккумулятор если  строка уже есть в аккумуляторе
+    //   }
+    //   return [...acc, item]; // верни все что накопил аккумулятор и верни следующую строку(которой нет в аккумуляторе)
+    // }, []); // клади аккумулятор в массив
+    // obj.keywords = result.join(" "); // соединяем все в одну строку и эту строку присваиваем как новое значение ключа keywords(потому что for'om пробежались по всем объектам data)
+
+    // второй вариант решения function getUnicData(data) {
+    //   const unicData = [];
+    //   data.forEach((card) => {
+    //     unicData.push({
+    //       ...card,
+    //       keywords: [...new Set(card.keywords.split(" "))].join(" "),
+    //     });
+    //   });
+    //   return unicData;
+    // }
+
+    let result = new Set(obj.keywords.split(" "));
+    let total = "";
+    for (let n of result) {
+      total = total + " " + n;
+    }
+    obj.keywords = total;
+  }
+}
+getUniqueKeywords(data); // вызов даты поменял ключи
 function createCards({ title, symbol, keywords }) {
   let pushCards = document.createElement("div");
   pushCards.className = "main__cards";
@@ -13,12 +43,17 @@ function createCards({ title, symbol, keywords }) {
 
 const inputs = document.querySelector("input");
 inputs.addEventListener("input", (evt) => {
-  let newArr = data.filter((item) => item.keywords.includes(inputs.value));
-  cards.innerHTML = "";
+  let newArr = data.filter(
+    (item) =>
+      item.title.toLowerCase().includes(inputs.value.toLowerCase()) ||
+      item.keywords.toLowerCase().includes(inputs.value.toLowerCase())
+  );
+
   renderCards(newArr);
 });
 
 function renderCards(arr) {
+  cards.innerHTML = "";
   arr.forEach((obj) => {
     cards.append(createCards(obj));
   });
