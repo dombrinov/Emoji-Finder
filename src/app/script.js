@@ -12,17 +12,11 @@ function createCards({ title, symbol, keywords }) {
 }
 
 const inputs = document.querySelector("input");
-
 inputs.addEventListener("input", (evt) => {
-  inputs.setAttribute("id", evt.target.value);
+  let newArr = data.filter((item) => item.keywords.includes(inputs.value));
+  cards.innerHTML = "";
+  renderCards(newArr);
 });
-
-function findEmoji(arr) {
-  let newArr = arr.filter((item) =>
-    item.keywords.includes(inputs.value) ? item : false
-  );
-  return newArr;
-}
 
 function renderCards(arr) {
   arr.forEach((obj) => {
@@ -30,5 +24,4 @@ function renderCards(arr) {
   });
 }
 
-// renderCards(data);
-renderCards(findEmoji(data));
+renderCards(data);
