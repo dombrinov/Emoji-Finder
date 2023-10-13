@@ -1,7 +1,6 @@
 // import { data } from "./data/data.js";
-const response = await fetch("https://emoji.ymatuhin.workers.dev/")
-const data = await response.json()
-
+const response = await fetch("http://localhost:5000/api/get/full");
+const data = await response.json();
 
 const cards = document.body.querySelector(".main__container");
 
@@ -45,14 +44,16 @@ function createCards({ title, symbol, keywords }) {
 }
 
 const inputs = document.querySelector("input");
-inputs.addEventListener("input", (evt) => {
-  let newArr = data.filter(
-    (item) =>
-      item.title.toLowerCase().includes(inputs.value.toLowerCase()) ||
-      item.keywords.toLowerCase().includes(inputs.value.toLowerCase())
-  );
-
-  renderCards(newArr);
+inputs.addEventListener("input", async (evt) => {
+  // let newArr = data.filter(
+  //   (item) =>
+  //     item.title.toLowerCase().includes(inputs.value.toLowerCase()) ||
+  //     item.keywords.toLowerCase().includes(inputs.value.toLowerCase())
+  // );
+  let controller = new AbortController();
+  const response = fetch(`http://localhost:5000/api/get?query=${inputs.value}`);
+  response.then((res) => res.json());
+  console.log(response.then((res) => res.json()));
 });
 
 function renderCards(arr) {
@@ -60,6 +61,12 @@ function renderCards(arr) {
   arr.forEach((obj) => {
     cards.append(createCards(obj));
   });
+}
+
+async function fetchEmoji(str) {
+  const response = await fetch(`http://localhost:5000/api/get?query=${str}`);
+
+  return response.json();
 }
 
 renderCards(data);

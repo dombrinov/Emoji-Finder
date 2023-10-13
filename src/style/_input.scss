@@ -8,7 +8,7 @@
   border-radius: 4px;
   border: 1px solid #ced4da;
   background: #fff;
-  padding: 22px 502px 21px 32px;
+  padding: 22px 402px 21px 32px;
 
   color: #055160;
   font-family: Inter;
@@ -19,4 +19,197 @@
 }
 ::-moz-placeholder {
   color: #abb5be;
+}
+@media screen and (max-width: 908px) {
+  .input {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    max-width: 610px;
+    height: 64px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    padding: 22px 300px 21px 32px;
+
+    color: #055160;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 87.5% */
+  }
+  ::-moz-placeholder {
+    color: #abb5be;
+  }
+}
+@media screen and (max-width: 808px) {
+  .input {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    transform: translate(-50%, 50%);
+    max-width: 510px;
+    height: 64px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    padding: 22px 75px 21px 32px;
+
+    color: #055160;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 87.5% */
+  }
+  ::-moz-placeholder {
+    color: #abb5be;
+  }
+}
+@media screen and (max-width: 787px) {
+  .input {
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+    transform: translate(-50%, 50%);
+    max-width: 510px;
+    height: 64px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    padding: 22px 75px 21px 32px;
+
+    color: #055160;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 87.5% */
+  }
+  ::-moz-placeholder {
+    color: #abb5be;
+  }
+}
+@media screen and (max-width: 744px) {
+  .input {
+    position: absolute;
+    bottom: 0;
+    left: 48%;
+    transform: translate(-50%, 50%);
+    max-width: 510px;
+    height: 64px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    padding: 22px 75px 21px 32px;
+
+    color: #055160;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 87.5% */
+  }
+  ::-moz-placeholder {
+    color: #abb5be;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  .input {
+    position: absolute;
+    bottom: 0;
+    left: 48%;
+    transform: translate(-50%, 50%);
+    max-width: 510px;
+    height: 64px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    padding: 22px 75px 21px 32px;
+
+    color: #055160;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 87.5% */
+  }
+  ::-moz-placeholder {
+    color: #abb5be;
+  }
+}
+@media screen and (max-width: 551px) {
+  .input {
+    position: absolute;
+    bottom: 0;
+    left: 48%;
+    transform: translate(-50%, 50%);
+    max-width: 510px;
+    height: 64px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    padding: 11px 35px 11px 16px;
+
+    color: #055160;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 87.5% */
+  }
+  ::-moz-placeholder {
+    color: #abb5be;
+  }
+}
+@media screen and (max-width: 420px) {
+  .input {
+    position: absolute;
+    bottom: 0;
+    left: 48%;
+    transform: translate(-50%, 50%);
+    max-width: 310px;
+    height: 44px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    padding: 11px 35px 11px 16px;
+
+    color: #055160;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 87.5% */
+  }
+  ::-moz-placeholder {
+    color: #abb5be;
+  }
+}
+@media screen and (max-width: 320px) {
+  .input {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    max-width: 250px;
+    height: 44px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    padding: 11px 35px 11px 16px;
+
+    color: #055160;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 87.5% */
+  }
+  ::-moz-placeholder {
+    color: #abb5be;
+  }
 }
